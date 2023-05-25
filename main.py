@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request, Response, Form
+from fastapi import FastAPI, Request, Form
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
@@ -15,6 +15,6 @@ def read_main(request: Request):
 
 
 @app.post("/answer")
-async def process_question(question: str = Form(...)):
+def process_question(question: str = Form(...)):
     answer = return_answer(question)
     return answer
