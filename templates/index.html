@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Support Assistant</title>
+  <link rel="stylesheet" type="text/css" href="static/style.css">
+  <script>
+    function submitQuestion() {
+        let question = document.getElementById("question").value;
+        let answerPlaceholder = document.getElementById("answer-placeholder");
+        let answerContent = document.getElementById("answer-content");
+
+        // Show the answer placeholder
+        answerPlaceholder.style.display = "block";
+        answerContent.innerText = "Loading...";
+
+        // Make the request to the server
+        fetch("/answer", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "question=" + encodeURIComponent(question)
+        })
+            .then(response => response.text())
+            .then(answer => {
+                // Update the answer content
+                answerContent.innerText = answer;
+            })
+            .catch(error => {
+                // Handle any errors
+                answerContent.innerText = "Error: " + error;
+            });
+    }
+</script>
+
+</head>
+<body>
+<h1>Support Assistant</h1>
+<div class="container">
+  <h2>Ask about Forex Tester</h2>
+<input type="text" id="question" placeholder="Enter your question" required>
+<button type="button" onclick="submitQuestion()">Ask</button>
+<div id="answer-placeholder">
+  <h3>Answer:</h3>
+  <p id="answer-content"></p>
+</div>
+  </div>
+</body>
+</html>
