@@ -8,7 +8,7 @@ git clone https://github.com/oksana-feshchenko/assistant.git
 
 2. Navigate to the project directory:
 ```
-cd asistant
+cd assistant
 ```
 3. Create a virtual environment:
 
