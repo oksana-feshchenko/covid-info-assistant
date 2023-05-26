@@ -47,5 +47,5 @@ uvicorn main:app --reload
 ```
 Wait for "Application startup complete." And than go to  http://127.0.0.1:8000.
 ### Features
-Type your question about Forex Tester and wait to assistant provide you with the answer.
+Type your question about Covid-19 and wait to assistant provide you with the answer.
 ![img_1.png](static/img_1.png)
