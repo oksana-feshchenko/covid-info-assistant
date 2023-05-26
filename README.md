@@ -17,7 +17,7 @@ cd assistant
 3. Create a virtual environment:
 
 ```
-python3 -m venv venv
+python -m venv venv
 ```
 
 4. Activate the virtual environment:
@@ -48,4 +48,4 @@ uvicorn main:app --reload
 Wait for "Application startup complete." And than go to  http://127.0.0.1:8000.
 ### Features
 Type your question about Forex Tester and wait to assistant provide you with the answer.
-![img.png](static/img.png)
+![img_1.png](static/img_1.png)
