@@ -1,3 +1,7 @@
+### About
+This project focuses on developing a Chat-Assistant that leverages the power of OpenAI
+embeddings and utilizes FAISS as a vector database for efficient storage and retrieval.
+
 ### Getting started
 To get started with the Assistant App, you can follow these steps:
 
